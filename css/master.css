@@ -1,0 +1,137 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+:root {
+  /* ## Colors */
+  /* ### Primary */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  /* ### Neutral */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --Font-size-paragraph: 16px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+body {
+    background-color: var(--Pale-blue);
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.one {
+  width: 400px;
+  background-color: var(--Very-pale-blue);
+  border-radius: 15px;
+}
+.one .img img {
+  max-width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.container {
+  max-width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.text h2 {
+  margin-bottom: 15px;
+}
+.text p {
+  color: var(--Desaturated-blue);
+  font-size: var(--Font-size-paragraph);
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.info .con {
+  display: flex;
+  flex-basis: 70%;
+  align-items: center;
+}
+.info .pricing {
+  padding-left: 15px;
+}
+.info .pricing h2 {
+  font-size: 16px;
+}
+.info .pricing h2 span {
+  color: var(--Desaturated-blue);
+  font-size: 15px;
+}
+.info .Change {
+  flex-basis: 20%;
+  color: var(--Bright-blue);
+  transition: color 0.3s ease;
+}
+.info .Change:hover {
+  text-decoration: none;
+  color: hsl(224, 23%, 55%);
+}
+.one .Payment {
+  display: block;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  background-color: var(--Bright-blue);
+  color: white;
+  border-radius: 15px;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+.one .Payment:hover {
+  background-color: hsl(224, 23%, 55%);
+}
+.one button {
+  border: none;
+  margin-bottom: 20px;
+  color: var(--Desaturated-blue);
+  font-weight: 900;
+}
+.one button:hover {
+  color: var(--Dark-blue);
+}
+@media (max-width: 375px) {
+  body {
+    background-image: url(../images/pattern-background-mobile.svg);
+  }
+  .center {
+  min-height: 85vh;
+}
+  .one {
+    width: 300px;
+  }
+  .info {
+    justify-content: space-between;
+  }
+  .info .pricing h2 {
+    font-size: 15px;
+  }
+  .info .pricing h2 span {
+    font-size: 14px;
+  }
+}
